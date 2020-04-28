@@ -29,6 +29,20 @@ for i in trainingimgtab:
     trainingmasktab.append(i.replace('img','mask'))
 for i in testimgtab:
     testmasktab.append(i.replace('img','mask'))
+    
+# Making new folders
+testimgpath = path + '/test_images/' 
+if not os.path.exists(testimgpath):
+    os.makedirs(testimgpath)
+trainingimgpath = path + '/training_images/' 
+if not os.path.exists(trainingimgpath):
+    os.makedirs(trainingimgpath)    
+trainingmaskpath = path + '/training_masks/' 
+if not os.path.exists(trainingmaskpath):
+    os.makedirs(trainingmaskpath)
+testmaskpath = path + '/test_masks/' 
+if not os.path.exists(testmaskpath):
+    os.makedirs(testmaskpath)    
 
 # Saving images and masks to correct folder
 with tqdm.tqdm(total=len(testimgtab)) as pbar:
