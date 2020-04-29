@@ -92,7 +92,7 @@ plt.show()
 print('Calculation time: Average = ' + str(np.mean(time_list))[:7] + ' seconds, Max = ' + str(np.amax(time_list))[:7] + ' seconds, Min = ' + str(np.amin(time_list))[:7] + ' seconds')
 
 # Showing images and plotting individual ROC curves
-for i in range(len(testimg[:5])): # Currently shows results of 4 images
+for i in range(len(testimg[:5])): # Plotting only the outputs if the first 5 test images
   plt.rcParams.update({'figure.max_open_warning': 0})
   fig, axs = plt.subplots(nrows=1, ncols=4, figsize = (4*4,4))
   axs[0].imshow(img_list[int(i/4)])

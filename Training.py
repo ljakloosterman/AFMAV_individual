@@ -56,6 +56,11 @@ num_epoch = 50
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adadelta(resnet101.parameters())
 
+# Make folder to save models of it does not exist yet
+savemodelpath = path + '/saved_models/' 
+if not os.path.exists(savemodelpath):
+    os.makedirs(savemodelpath)
+
 epoch_loss_list = []
 # Start timer
 t0 = time.time()
@@ -86,7 +91,7 @@ for epoch in range(num_epoch):
   # Save every 10 epochs
   if epoch % 10 == 9:
     model_name = 'resnet101_' + str(epoch+1) + '_epochs'
-    path_model = path + '/saved_models/' + model_name
+    path_model = savemodelpath + model_name
     torch.save(resnet101.state_dict(), path_model)
   
   # Print results
