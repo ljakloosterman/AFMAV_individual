@@ -1,5 +1,5 @@
 # AFMAV_individual
-Welcome to the repository of my individual Automatic Flight of Micro Air Vehicles.\
+Welcome to the repository of my individual Automatic Flight of Micro Air Vehicles assignment.\
 To execute te code correctly please follow the following steps:\
 
 1. Download the repository locally.
